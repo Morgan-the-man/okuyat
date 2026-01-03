@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MORGAN</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="logo" href="logo.jpeg">
+  <meta charset="utf-8">
+  <meta name="description" content="Morgan's life, subjects and skills are shown here...">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div>
+    <div class="profile">
+      <img src="profile.jpeg" alt="Morgan's picture" width="100px" height="100px" class="image">
+      <h1 class="title">THE LEGEND</h1>
+      <button class="menu-btn">   MENU</button>
+    </div>
+    <div class="pic">
+      <figure>
+        <img src="first.jpeg" alt="morgan pic">
+        <figcaption><strong>Morgan Jeremiah</strong></figcaption>
+      </figure>
+    </div>
+    <div class="introduction">
+      <h2 align="center">Introduction</h2>
+      <p><details><summary>My name Is Okuyat Morgan Jeremiah...</summary>I'm a <b>curious</b> and driven individual with a passion for <b>learning and growth</b>.As a student and <a href="programming.html">tech enthusiast</a>, I love diving into <b>new</b> concepts and <strong>solving problems.</strong> When I'm not coding or studying, you can find me exploring <b>creative outlets</b> like <s>music or photography</s>. I'm all about connecting with people, <b>sharing ideas</b>, and making an <b>impact</b>. I thrive on <b>challenges</b> and believe in turning ideas into <b>action.</b> Whether it's collaborating on <b>projects,</b> discussing tech trends, or just chatting about life, I'm always up for engaging conversations and building meaningful connections. I'm constantly looking to learn more, push boundaries, and see where my curiosity takes me.</details></p>
+      <p><details><summary>I love tech and software...</summary>I'm a tech enthusiast with a passion for learning and solving problems. I love diving into new concepts, especially in web development and coding. I've worked with HTML, CSS, and JavaScript, creating interactive web pages and exploring frameworks like React. <b>My curiosity drives me to stay updated on tech trends</b> and experiment with new tools. I believe tech is a powerful tool for making an impact, whether it's building apps, automating tasks, or connecting people. <b>I enjoy collaborating on projects</b> that push boundaries and spark creativity. When I'm not coding, I explore photography or jam to music – tech and creativity mix well 😄. I'm always looking to learn more, contribute to exciting projects, and chat about tech's endless possibilities.</details></p>
+      <p><details><summary>The challenges I face start when...</summary>One of the biggest challenges I faced while coding was implementing a responsive sidebar menu. I wanted it to slide in from the right, cover 20% of the screen, and close when clicking outside. <b>Getting the overlay to work smoothly</b> was tricky – I had to toggle classes and handle clicks carefully. Ensuring it worked across devices was another hurdle. But figuring it out was super satisfying 😄! I learned a lot about CSS positioning, JavaScript event listeners, and debugging. <b>Persisting through the challenges</b> made the solution feel like a win. Now I feel more confident tackling similar UI challenges. Coding's like solving puzzles – it gets tough but the 'aha!' moments are worth it!</details></p>
+      <p><details><summary>School Involves learning and...</summary>School's been a journey of growth and discovery for me. I love learning new concepts, solving problems, and connecting with classmates over projects. <b>Balancing academics and personal projects</b> like coding or photography can be a challenge, but it's taught me time management. I'm passionate about tech and often apply classroom learnings to real-world projects – like building websites or apps. <b>Teachers have been super supportive</b> in guiding me, whether it's debugging code or prepping for exams. Outside classes, I join clubs to collaborate and meet like-minded folks. School's not just about grades; it's about building skills, networks, and curiosity 😄. I'm making the most of it – learning, exploring, and figuring out where I fit in. The experience fuels my drive to keep pushing boundaries.</details></p>
+    </div>
+  </div>
+  <div>
+    <form>
+      <fieldset>
+        <legend>What are you interested in?</legend>
+        <label><input required type="radio" name="interest" id="tech" value="tech">Tech</label><br>
+        <label><input type="radio" name="interest" id="school" value="money">Money</label><br>
+        <label><input type="radio" name="interest" id="food" value="food">Food</label><br>
+      </fieldset>
+      <fieldset>
+        <legend>Tell me anything</legend>
+        <input required type="text" placeholder="You're website is good or, it sucks">
+      </fieldset>
+      <button class="submit" type="submit">Submit</button>
+    </form>
+  </div>
+  <footer>
+    <p>No copyright</p>
+    <p>Email:omj.okuyatm@gmail.com</p>
+    <p>Whatsapp:+256 780958213</p>
+  </footer>
+  
+  
+  <div class="sidebar-menu">
+    <h2>Menu</h2>
+    <div class="school-subjects ">
+      <h3><a href="school-subjects.html">SCHOOL SUBJECTS</a></h3>
+    </div>
+    <div class="programming">
+      <h3><a href="programming.html">PROGRAMMING</a></h3>
+    </div> 
+    <div class="forex">
+      <h3><a href="forex.html">FOREX</a></h3>
+    </div>
+    <div class="history">
+      <h3><a href="history.html">HISTORY</a></h3>
+    </div>
+    <div class="cars">
+      <h3><a href="cars.html">CARS</a></h3>
+    </div>
+    <div class="food">
+      <h3><a href="food.html">FOOD</a></h3>
+    </div>
+  </div>
+  <div class="overlay"></div>
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
+const sidebarMenu = document.querySelector('.sidebar-menu');
+const overlay = document.querySelector('.overlay');
+
+menuBtn.addEventListener('click', () => {
+  sidebarMenu.classList.toggle('show');
+  overlay.classList.toggle('show');
+});
+      document.addEventListener('click', (e) => {
+  if (sidebarMenu.classList.contains('show') && !sidebarMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+    sidebarMenu.classList.remove('show');
+    overlay.classList.remove('show');
+  }
+});
+  </script>
+</body>
+</html>
